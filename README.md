@@ -1,7 +1,7 @@
 # My first project
 # C++ Vector Implementation in C
 
-This project provides a basic implementation of a dynamic array, commonly known as a vector, in C++. It serves as a learning exercise for understanding how dynamic arrays work and how to implement them in C++.
+This project provides a basic implementation of a dynamic array, commonly known as a vector, in C++. It serves as a learning exercise for understanding how dynamic arrays work and how to implement them in C.
 
 ## Features
 
