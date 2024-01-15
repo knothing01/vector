@@ -1,3 +1,0 @@
-/Users/michael/Desktop/m_vector/cmake-build-debug/CMakeFiles/m_vector.dir
-/Users/michael/Desktop/m_vector/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/michael/Desktop/m_vector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
