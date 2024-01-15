@@ -23,14 +23,6 @@ int back (Vector*);
 int size(Vector*);
 int capacity(Vector*);
 
-//---------------------------------------------------------------------
-//have to improve logic
-//check whether capacity of the array is the power of 2  shrink_to_fit
-// implementing ceil "math.h" function
-//unsigned int ceilLog2(Vector* vector);
-//unsigned int next_power_of_two(Vector*);
-//---------------------------------------------------------------------
-
 //destructor
 void destruct(Vector*);
 

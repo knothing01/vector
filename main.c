@@ -30,13 +30,13 @@ int main(){
     printf("Size - %zu\n", vector.size);
 
     //POP_BACK
-//    pop_back(&vector);
-//    printf("--------------------------\n");
-//    printf("New array - after deleting element");
-//
-//    for (int i = 0; i < vector.size; ++i){
-//        printf("%d - %d \n", i+1, vector.m_array[i]);
-//    }
+    pop_back(&vector);
+    printf("--------------------------\n");
+    printf("New array - after deleting element");
+
+    for (int i = 0; i < vector.size; ++i){
+        printf("%d - %d \n", i+1, vector.m_array[i]);
+    }
 
     printf("Size - %zu\n", vector.size);
     printf("Capacity - %zu\n", vector.capacity);
@@ -62,7 +62,7 @@ int main(){
     printf("%zu\n", vector.size);
     printf("%zu\n", vector.capacity);
 
-    //shrink_to_fit testing
+//    //shrink_to_fit testing
     shrink_to_fit(&vector);
     printf("%zu\n", vector.size);
     printf("%zu\n", vector.capacity);

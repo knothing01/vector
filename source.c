@@ -9,22 +9,6 @@ void init_array(Vector* vector){
     vector->m_array = (int *)calloc(vector->capacity, sizeof(int));
 }
 
-//----------------------------------------------------
-//unsigned int ceilLog2(Vector* vector) {
-//    unsigned int n = (unsigned int) vector->size;
-//    unsigned int count = 0;
-//    n--;
-//    while (n > 0) {
-//        n >>= 1;
-//        count++;
-//    }
-//    return count;
-//}
-//unsigned int next_power_of_two(Vector* vector){
-//    return 1u << ceilLog2(vector);
-//}
-//---------------------------------------------------
-
 void resize(size_t new_size, Vector* vector){
     int* tmp = (int*)malloc((new_size * sizeof(int)));
     if (tmp == NULL){
@@ -50,7 +34,6 @@ void push_back(int val, Vector* vector){
        vector->capacity *= 2;
        resize(vector->capacity, vector);
    }
-
    vector->m_array[vector->size++] = val;
 }
 
@@ -80,7 +63,6 @@ int empty(Vector* vector){
 int front(Vector* vector){
     if (vector->size >= 1)
         return vector->m_array[0];
-
     return 0;
 }
 
@@ -99,14 +81,16 @@ int capacity(Vector* vector){
 }
 
 void insert(Vector* vector, int pos, int val){
-
     if (pos < 0 || pos > vector->size){
         printf("Invalid position");
         return;
     }
 
     // checking new element will fit in capacity if won't multiply capacity by 2
-    if (vector->size == vector->capacity) { vector->capacity *= 2;}
+    if (vector->size == vector->capacity) {
+        vector->capacity *= 2;
+        resize(vector->capacity, vector);
+    }
     for(int i = (int) vector->size; i > pos; --i){
         vector->m_array[i] = vector->m_array[i-1];
     }
@@ -116,7 +100,6 @@ void insert(Vector* vector, int pos, int val){
 }
 
 void erase(Vector* vector, int pos){
-
     if (pos < 0 || pos >= vector->size){
         printf("Invalid position");
         return;
@@ -129,7 +112,6 @@ void erase(Vector* vector, int pos){
 }
 
 void shrink_to_fit(Vector* vector) {
-
     if ( vector->size == vector->capacity) {
         printf("You can't change vector's capacity");
         return;
